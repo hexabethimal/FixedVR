@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixedVR", "FixedVR\FixedVR.csproj", "{7F73FA71-5343-408F-A83B-5BFA9300E69E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FixedVR Application", "FixedVR Application", "{0F011125-6D3C-4542-B603-6DA7B0B542A8}"
+	ProjectSection(SolutionItems) = preProject
+		FixedVR Application\FixedVR.exe = FixedVR Application\FixedVR.exe
+		FixedVR Application\LICENSE.txt = FixedVR Application\LICENSE.txt
+		FixedVR Application\ScpDriverInstaller.exe = FixedVR Application\ScpDriverInstaller.exe
+		FixedVR Application\SimWinGamePad.dll = FixedVR Application\SimWinGamePad.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arduino", "Arduino", "{552DD2C3-50CF-4D58-970C-F522706403C1}"
+	ProjectSection(SolutionItems) = preProject
+		Arduino\fixedvr.ino = Arduino\fixedvr.ino
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F73FA71-5343-408F-A83B-5BFA9300E69E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F73FA71-5343-408F-A83B-5BFA9300E69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F73FA71-5343-408F-A83B-5BFA9300E69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F73FA71-5343-408F-A83B-5BFA9300E69E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FB15C71-7F18-41A0-B6C3-F4CC88BD7233}
+	EndGlobalSection
+EndGlobal
