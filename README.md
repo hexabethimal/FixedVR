@@ -1,16 +1,33 @@
 # FixedVR
 VR motion controller for movement-in-place
 
+This GitHub repository includes:
+- project files for developers, including detailed comments
+- the full application for those unfamiliar with coding
+- an Arduino sketch file
+- a parts list with detailed instructions and alternatives
+- a step-by-step setup guide for those new to Arduino and/or SteamVR
+
+## Table of Contents
+- [What is FixedVR?](https://github.com/hexabethimal/FixedVR#what-is-fixedvr)
+- [Parts Required](https://github.com/hexabethimal/FixedVR#parts-required)
+- [Setup](https://github.com/hexabethimal/FixedVR#arduino-setup)
+  - [Arduino](https://github.com/hexabethimal/FixedVR#arduino-setup)
+  - [FixedVR](https://github.com/hexabethimal/FixedVR#fixedvr-setup)
+  - [Steam](https://github.com/hexabethimal/FixedVR#steam-setup)
+
 ## What is FixedVR?
 This is a VR motion controller for forward movement in games, while walking or running in-place in real life. FixedVR does not require a movement harness or a large play area and is designed for both able-bodied individuals and those with disabilities or limited mobility.
 
-With FixedVR, movement-in-place is combined with the ability to navigate corners or obstacles, bend down, sidestep, turn around in place without moving, and stop when desired. It is compatible with games running through SteamVR that support continous movement (not teleportation-only movement). FixedVR functions as an XInput device translating controls to gamepad inputs in SteamVR control settings. It uses the [ScpVBus virtual gamepad driver](https://github.com/DavidRieman/ScpDriverInterface/) that is installed automatically when FixedVR is launched. Installation of the virtual driver is required.
+With FixedVR, movement-in-place is combined with the ability to navigate corners or obstacles, bend down, sidestep, turn around in place without moving, and stop when desired. It is compatible with games running through SteamVR that support continous movement (not teleportation-only movement). 
+
+As human movement varies based on individual differences, FixedVR provides multiple settings to adapt movement response to user preferences. Mouse-over tooltips provide extra information to help you make meaningful determinations about settings choices. Movement settings can be changed in-game as frequently as needed, without requiring restart. A debug panel is additionally available for those troubleshooting movement while making code adjustments.
+
+FixedVR functions as an XInput device translating controls to gamepad inputs in SteamVR control settings. It uses the [ScpVBus virtual gamepad driver](https://github.com/DavidRieman/ScpDriverInterface/) that is installed automatically when FixedVR is launched. Installation of the virtual driver is required.
 
 FixedVR has had limited compatibility testing as of September 2022. Only the following are known to be compatible:
 - HP Reverb G2 (version 2) with original hand controllers
 - Half Life: Alyx
-
-As human movement varies based on individual differences, FixedVR provides multiple settings to adapt movement response to user preferences. Mouse-over tooltips provide extra information to help you make meaningful determinations about settings choices. Movement settings can be changed in-game as frequently as needed, without requiring restart. A debug panel is additionally available for those troubleshooting movement while making code adjustments. 
 
 Movement in Half Life: Alyx is handled the following way:
 - As you walk-in-place, you will move at a walking pace in the game.
@@ -18,13 +35,6 @@ Movement in Half Life: Alyx is handled the following way:
 - Jumping is not handled by FixedVR currently and this is intentional. Jumping while wearing a headset and no harness could be dangerous. It is further dangerous, if not impossible, to simulate forward jumping over a gap. Instead, jumping is mapped to the left joystick button and functions as a teleport.
 - The SteamVR Controller Bindings setup explained below assumes player preference for weapons in the right-hand. Hand controller and gamepad controller bindings will have to be reversed for left-handed players.
 - While walking and turning in real life is the immersive experience gained by using FixedVR, players can still additionally control turning on the left joystick and movement on the right joystick. (Using the joysticks for continuous turning or movement while remaining physically stationary might cause motion sickness.)
-
-This GitHub repository includes:
-- project files for developers, including detailed comments
-- the full application for those unfamiliar with coding
-- an Arduino sketch file
-- a parts list with detailed instructions and alternatives
-- a step-by-step setup guide for those new to Arduino and/or SteamVR
 
 ## Parts Required
 Minimally, you will need an Arduino with WiFi capability and an acceleromoter. Whether you choose to get these as a combination of board and shields, instead of an all-inclusive board is up to you. However, if you don’t choose the Arduino listed below, take into consideration that the movement-control of FixedVR may require modifications to accommodate the behavior of an IMU other than the ST LSM6DSOX 6-axis IMU contained in the Arduino Nano RP2040 Connect. 
