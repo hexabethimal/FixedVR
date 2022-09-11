@@ -79,4 +79,4 @@ C:\Program Files (x86)\Steam\steampps\common\SteamVR\resources\settings\default.
 2. The SteamVR Controller Bindings settings menus are difficult to navigate, difficult to understand, and at times unresponsive (sometimes requiring SteamVR restart). This is made even more difficult by only being able to make changes inside menus with your VR hand controllers and headset on. This step will therefore require you to either memorize the following screenshots, or to raise and lower your headset repeatedly while you refer back to these directions. It is tedious and frustrating, but you can save your controller profile and won’t have to do this again.
 
 First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Show Old Binding UI**
-![Image of settings menu](/images/con2edit.png)
+![Image of settings menu](/Images/con2edit.png)
