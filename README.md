@@ -50,10 +50,10 @@ Setup will require 3 main types: Arduino setup, FixedVR setup, and SteamVR setup
   - WiFiNINA
 4. Modify the FixedVR.ino file with the following:
 ```
-char ssid[] = “yourSSIDname”;
-char pass[] = “yourSSIDpassword”;
+char ssid[] = “your_wifi_name”;
+char pass[] = “your_wifi_password”;
 IPAddress remoteHost(123,456,789,101); //The IP address of the computer running FixedVR
-uint16_t portNumber = 12345; //The open port number of the receiving computer
+uint16_t portNumber = 12345; //The port number of the computer running FixedVR
 ```
 5. Connect your Arduino to your computer, specify the COM Port under Tools, and Upload FixedVR.ino to your device . You can find the COM Port of the connected Arduino by going to Device Manager and looking under Ports (COM & LPT).
 
