@@ -76,4 +76,7 @@ uint16_t portNumber = 12345; //The port number of the computer running FixedVR
 ```
 C:\Program Files (x86)\Steam\steampps\common\SteamVR\resources\settings\default.vrsettings
 ```
-2. The SteamVR Controller Bindings settings menus are difficult to navigate, difficult to understand, and at times unresponsive (sometimes requiring SteamVR restart). This is made even more difficult by only being able to make changes inside menus with your VR hand controllers (and probably with your headset on, but you can optionally activate the [Null Driver](https://github.com/username223/SteamVRNoHeadset) to disable requiring a headset to be worn – however, it is an extra difficulty to use the hand controllers while not wearing the headset.) This step will therefore require you to either memorize the following screenshots, or to raise and lower your headset repeatedly while you refer back to these directions. It is tedious and frustrating, but you can save your controller profile and won’t have to do this again.
+2. The SteamVR Controller Bindings settings menus are difficult to navigate, difficult to understand, and at times unresponsive (sometimes requiring SteamVR restart). This is made even more difficult by only being able to make changes inside menus with your VR hand controllers and headset on. This step will therefore require you to either memorize the following screenshots, or to raise and lower your headset repeatedly while you refer back to these directions. It is tedious and frustrating, but you can save your controller profile and won’t have to do this again.
+
+First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Show Old Binding UI**
+![Image of settings menu](/images/con2edit.png)
