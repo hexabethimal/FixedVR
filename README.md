@@ -88,7 +88,7 @@ Verify that the **Current Controller** selected are the hand motion controllers 
 ![Image of controller menu](/Images/con4edit.png)
 
 First select the **Move** tab at the top, then scroll down till you see options for the left and right thumbsticks. Edit the controls to match this image. When you are finished, you can optionally click **Save Personal Binding**. Do not click Replace Default Binding (it is difficult to undo this action).
-![Image of controller menu](/Images/con5edit.png)
+![Image of controller menu](/Images/con5edit.PNG)
 
 Click **Back** to return to the previous screen. Then select the **Gamepad** controller and click **Edit** under **Current Binding**.
 ![Image of controller menu](/Images/con6edit.png)
