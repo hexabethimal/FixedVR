@@ -568,14 +568,14 @@ namespace FixedVR
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(450, 375);
+            this.ClientSize = new System.Drawing.Size(450, 380);
             this.Controls.Add(this.Panel_sidewaysense);
             this.Controls.Add(this.Flowlayout_main);
             this.Controls.Add(this.Panel_walkmax);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fixedVR";
+            this.Text = "FixedVR";
             this.TopMost = true;
             this.Flowlayout_main.ResumeLayout(false);
             this.Panel_debug.ResumeLayout(false);

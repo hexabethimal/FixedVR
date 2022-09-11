@@ -6,15 +6,14 @@
 
 WiFiClient client;
 WiFiUDP Udp;
-char ssid[] = "";
-char pass[] = "";
+char ssid[] = "your_wifi_network";
+char pass[] = "your_wifi_password";
 int status = WL_IDLE_STATUS;
 
-IPAddress remoteHost(123,456,789,101);  // IP address of the remote service
+IPAddress remoteHost(123,456,789,101);
 uint16_t portNumber = 12345;  
 
 float Ax, Ay, Az;
-float Gx, Gy, Gz;
 float lastX, lastY, lastZ;
 float changeX, changeY, changeZ;
 
@@ -23,10 +22,11 @@ void setup() {
     status = WiFi.begin(ssid, pass);
     delay(2000);
   }
-  Udp.begin(portNumber);   
-  lastX = 0.000;
-  lastY = 0.000;
-  lastZ = 0.000;           
+  Udp.begin(portNumber); 
+  if (!IMU.begin()) {                    
+        while (1);
+  }
+  lastX = 0.000;            
   loop();
 }
 
