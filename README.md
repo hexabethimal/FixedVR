@@ -78,5 +78,22 @@ C:\Program Files (x86)\Steam\steampps\common\SteamVR\resources\settings\default.
 ```
 2. The SteamVR Controller Bindings settings menus are difficult to navigate, difficult to understand, and at times unresponsive (sometimes requiring SteamVR restart). This is made even more difficult by only being able to make changes inside menus with your VR hand controllers and headset on. This step will therefore require you to either memorize the following screenshots, or to raise and lower your headset repeatedly while you refer back to these directions. It is tedious and frustrating, but you can save your controller profile and won’t have to do this again.
 
-First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Show Old Binding UI**
+First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Show Old Binding UI**.
 ![Image of settings menu](/Images/con2edit.png)
+
+Click to expand the list of games and select the game of your choice (Half-Life: Alyx in this example).
+![Image of game select](/Images/con3.PNG)
+
+Verify that the **Current Controller** selected are the hand motion controllers (HP Motion Controller in this example), then click **Edit** under **Current Binding**.
+![Image of controller menu](/Images/con4edit.png)
+
+First select the **Move** tab at the top, then scroll down till you see options for the left and right thumbsticks. Edit the controls to match this image. When you are finished, you can optionally click **Save Personal Binding**. Do not click Replace Default Binding (it is difficult to undo this action).
+![Image of controller menu](/Images/con5edit.png)
+
+Click **Back** to return to the previous screen. Then select the **Gamepad** controller and click **Edit** under **Current Binding**.
+![Image of controller menu](/Images/con6edit.png)
+
+First select the **Move** tab at the top, then scroll down till you see options for the left thumbstick. Edit the controls to match this image.
+![Image of controller menu](/Images/con7edit.png)
+
+Lastly, use the Half-Life: Alyx in-game **Preferences** menu to select **Movement: Continuous**.
