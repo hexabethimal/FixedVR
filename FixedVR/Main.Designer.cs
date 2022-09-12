@@ -92,7 +92,7 @@ namespace FixedVR
             this.Txt_debug.Multiline = true;
             this.Txt_debug.Name = "Txt_debug";
             this.Txt_debug.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Txt_debug.Size = new System.Drawing.Size(421, 274);
+            this.Txt_debug.Size = new System.Drawing.Size(421, 324);
             this.Txt_debug.TabIndex = 0;
             this.Txt_debug.TabStop = false;
             // 
@@ -102,7 +102,8 @@ namespace FixedVR
             this.Btn_connect.FlatAppearance.BorderSize = 2;
             this.Btn_connect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_connect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_connect.Location = new System.Drawing.Point(3, 270);
+            this.Btn_connect.Location = new System.Drawing.Point(3, 319);
+            this.Btn_connect.Margin = new System.Windows.Forms.Padding(5);
             this.Btn_connect.Name = "Btn_connect";
             this.Btn_connect.Size = new System.Drawing.Size(421, 42);
             this.Btn_connect.TabIndex = 6;
@@ -119,7 +120,7 @@ namespace FixedVR
             this.Flowlayout_main.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Flowlayout_main.Location = new System.Drawing.Point(7, 8);
             this.Flowlayout_main.Name = "Flowlayout_main";
-            this.Flowlayout_main.Size = new System.Drawing.Size(436, 696);
+            this.Flowlayout_main.Size = new System.Drawing.Size(436, 794);
             this.Flowlayout_main.TabIndex = 7;
             // 
             // Btn_toggledebug
@@ -145,14 +146,14 @@ namespace FixedVR
             this.Panel_debug.Controls.Add(this.Txt_debug);
             this.Panel_debug.Location = new System.Drawing.Point(3, 49);
             this.Panel_debug.Name = "Panel_debug";
-            this.Panel_debug.Size = new System.Drawing.Size(428, 318);
+            this.Panel_debug.Size = new System.Drawing.Size(428, 367);
             this.Panel_debug.TabIndex = 8;
             this.Panel_debug.Visible = false;
             // 
             // Btn_stopdebug
             // 
             this.Btn_stopdebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_stopdebug.Location = new System.Drawing.Point(3, 283);
+            this.Btn_stopdebug.Location = new System.Drawing.Point(3, 333);
             this.Btn_stopdebug.Name = "Btn_stopdebug";
             this.Btn_stopdebug.Size = new System.Drawing.Size(421, 31);
             this.Btn_stopdebug.TabIndex = 5;
@@ -171,9 +172,9 @@ namespace FixedVR
             this.Panel_main.Controls.Add(this.Panel_alwaysrun);
             this.Panel_main.Controls.Add(this.Panel_movement);
             this.Panel_main.Controls.Add(this.Btn_connect);
-            this.Panel_main.Location = new System.Drawing.Point(3, 373);
+            this.Panel_main.Location = new System.Drawing.Point(3, 422);
             this.Panel_main.Name = "Panel_main";
-            this.Panel_main.Size = new System.Drawing.Size(428, 318);
+            this.Panel_main.Size = new System.Drawing.Size(428, 367);
             this.Panel_main.TabIndex = 9;
             // 
             // Panel_walkmin
@@ -183,9 +184,10 @@ namespace FixedVR
             this.Panel_walkmin.Controls.Add(this.label12);
             this.Panel_walkmin.Controls.Add(this.Txt_walkmin);
             this.Panel_walkmin.Controls.Add(this.Lbl_walkmin);
-            this.Panel_walkmin.Location = new System.Drawing.Point(3, 3);
+            this.Panel_walkmin.Location = new System.Drawing.Point(3, 5);
+            this.Panel_walkmin.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_walkmin.Name = "Panel_walkmin";
-            this.Panel_walkmin.Size = new System.Drawing.Size(421, 33);
+            this.Panel_walkmin.Size = new System.Drawing.Size(421, 35);
             this.Panel_walkmin.TabIndex = 23;
             // 
             // label12
@@ -226,9 +228,10 @@ namespace FixedVR
             this.Panel_stopmax.Controls.Add(this.label2);
             this.Panel_stopmax.Controls.Add(this.Txt_stopdetection);
             this.Panel_stopmax.Controls.Add(this.Lbl_stopmax);
-            this.Panel_stopmax.Location = new System.Drawing.Point(3, 78);
+            this.Panel_stopmax.Location = new System.Drawing.Point(3, 95);
+            this.Panel_stopmax.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_stopmax.Name = "Panel_stopmax";
-            this.Panel_stopmax.Size = new System.Drawing.Size(421, 33);
+            this.Panel_stopmax.Size = new System.Drawing.Size(421, 35);
             this.Panel_stopmax.TabIndex = 16;
             // 
             // label2
@@ -269,9 +272,10 @@ namespace FixedVR
             this.Panel_runmin.Controls.Add(this.label1);
             this.Panel_runmin.Controls.Add(this.Combo_detectrun);
             this.Panel_runmin.Controls.Add(this.Lbl_runmin);
-            this.Panel_runmin.Location = new System.Drawing.Point(3, 42);
+            this.Panel_runmin.Location = new System.Drawing.Point(3, 50);
+            this.Panel_runmin.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_runmin.Name = "Panel_runmin";
-            this.Panel_runmin.Size = new System.Drawing.Size(421, 33);
+            this.Panel_runmin.Size = new System.Drawing.Size(421, 35);
             this.Panel_runmin.TabIndex = 21;
             // 
             // label1
@@ -315,9 +319,10 @@ namespace FixedVR
             this.Panel_stopsense.Controls.Add(this.label3);
             this.Panel_stopsense.Controls.Add(this.Combo_stopsensitivity);
             this.Panel_stopsense.Controls.Add(this.Lbl_stopsense);
-            this.Panel_stopsense.Location = new System.Drawing.Point(3, 114);
+            this.Panel_stopsense.Location = new System.Drawing.Point(3, 140);
+            this.Panel_stopsense.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_stopsense.Name = "Panel_stopsense";
-            this.Panel_stopsense.Size = new System.Drawing.Size(421, 33);
+            this.Panel_stopsense.Size = new System.Drawing.Size(421, 35);
             this.Panel_stopsense.TabIndex = 17;
             // 
             // label3
@@ -360,9 +365,10 @@ namespace FixedVR
             this.Panel_port.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel_port.Controls.Add(this.Txt_serversocket);
             this.Panel_port.Controls.Add(this.Lbl_port);
-            this.Panel_port.Location = new System.Drawing.Point(3, 231);
+            this.Panel_port.Location = new System.Drawing.Point(3, 275);
+            this.Panel_port.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_port.Name = "Panel_port";
-            this.Panel_port.Size = new System.Drawing.Size(421, 33);
+            this.Panel_port.Size = new System.Drawing.Size(421, 34);
             this.Panel_port.TabIndex = 19;
             // 
             // Txt_serversocket
@@ -394,9 +400,10 @@ namespace FixedVR
             this.Panel_alwaysrun.Controls.Add(this.Radio_alwaysrunno);
             this.Panel_alwaysrun.Controls.Add(this.Lbl_alwaysrun);
             this.Panel_alwaysrun.Controls.Add(this.Radio_alwaysrunyes);
-            this.Panel_alwaysrun.Location = new System.Drawing.Point(3, 153);
+            this.Panel_alwaysrun.Location = new System.Drawing.Point(3, 185);
+            this.Panel_alwaysrun.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_alwaysrun.Name = "Panel_alwaysrun";
-            this.Panel_alwaysrun.Size = new System.Drawing.Size(421, 33);
+            this.Panel_alwaysrun.Size = new System.Drawing.Size(421, 35);
             this.Panel_alwaysrun.TabIndex = 15;
             // 
             // Radio_alwaysrunno
@@ -438,9 +445,10 @@ namespace FixedVR
             this.Panel_movement.Controls.Add(this.Radio_bothlegs);
             this.Panel_movement.Controls.Add(this.Lbl_movement);
             this.Panel_movement.Controls.Add(this.Radio_eachleg);
-            this.Panel_movement.Location = new System.Drawing.Point(3, 192);
+            this.Panel_movement.Location = new System.Drawing.Point(3, 230);
+            this.Panel_movement.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_movement.Name = "Panel_movement";
-            this.Panel_movement.Size = new System.Drawing.Size(421, 33);
+            this.Panel_movement.Size = new System.Drawing.Size(421, 35);
             this.Panel_movement.TabIndex = 14;
             // 
             // Radio_bothlegs
@@ -568,7 +576,7 @@ namespace FixedVR
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(450, 380);
+            this.ClientSize = new System.Drawing.Size(450, 431);
             this.Controls.Add(this.Panel_sidewaysense);
             this.Controls.Add(this.Flowlayout_main);
             this.Controls.Add(this.Panel_walkmax);
