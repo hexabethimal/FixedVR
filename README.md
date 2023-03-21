@@ -23,7 +23,7 @@ With FixedVR, movement-in-place is combined with the ability to navigate corners
 
 As human movement varies based on individual differences, FixedVR provides multiple settings to adapt movement response to user preferences. Mouse-over tooltips provide extra information to help you make meaningful determinations about settings choices. Movement settings can be changed in-game as frequently as needed, without requiring restart. A debug panel is additionally available for those troubleshooting movement while making code adjustments.
 
-![Image of FixedVR UI](/Images/interface5.png)
+![Image of FixedVR UI](/Images/interface6.png)
 
 FixedVR functions as an XInput device translating controls to gamepad inputs in SteamVR control settings. It uses the [ScpVBus virtual gamepad driver](https://github.com/DavidRieman/ScpDriverInterface/) that is installed automatically when FixedVR is launched. Installation of the virtual driver is required.
 
@@ -90,7 +90,7 @@ Verify that the **Current Controller** selected are the hand motion controllers 
 ![Image of controller menu](/Images/con4edit.png)
 
 First select the **Move** tab at the top, then scroll down till you see options for the left and right thumbsticks. Edit the controls to match this image. When you are finished, you can optionally click **Save Personal Binding**. Do not click Replace Default Binding (it is difficult to undo this action).
-![Image of controller menu](/Images/con5edit.png)
+![Image of controller menu](/Images/con9edit.png)
 
 Click **Back** to return to the previous screen. Then select the **Gamepad** controller and click **Edit** under **Current Binding**.
 ![Image of controller menu](/Images/con6edit.png)
