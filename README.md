@@ -23,7 +23,7 @@ With FixedVR, movement-in-place is combined with the ability to navigate corners
 
 As human movement varies based on individual differences, FixedVR provides multiple settings to adapt movement response to user preferences. Mouse-over tooltips provide extra information to help you make meaningful determinations about settings choices. Movement settings can be changed in-game as frequently as needed, without requiring restart. A debug panel is additionally available for those troubleshooting movement while making code adjustments.
 
-![Image of FixedVR UI](/Images/interface5.PNG)
+![Image of FixedVR UI](/Images/interface5.png)
 
 FixedVR functions as an XInput device translating controls to gamepad inputs in SteamVR control settings. It uses the [ScpVBus virtual gamepad driver](https://github.com/DavidRieman/ScpDriverInterface/) that is installed automatically when FixedVR is launched. Installation of the virtual driver is required.
 
@@ -80,17 +80,17 @@ C:\Program Files (x86)\Steam\steampps\common\SteamVR\resources\settings\default.
 ```
 2. The SteamVR Controller Bindings settings menus are difficult to navigate, difficult to understand, and at times unresponsive (sometimes requiring SteamVR restart). This is made even more difficult by only being able to make changes inside menus with your VR hand controllers and headset on. This step will therefore require you to either memorize the following screenshots, or to raise and lower your headset repeatedly while you refer back to these directions. It is tedious and frustrating, but you can save your controller profile and won’t have to do this again.
 
-First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Show Old Binding UI**.
-![Image of settings menu](/Images/con2edit.png)
+First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Manage Controller Bindings**.
+![Image of settings menu](/Images/con1edit.png)
 
-Click to expand the list of games and select the game of your choice (Half-Life: Alyx in this example).
-![Image of game select](/Images/con3.PNG)
+Click to expand the list of games and select the game of your choice (Half-Life: Alyx in this example). Then click **Edit This Binding**.
+![Image of game select](/Images/con8edit.png)
 
 Verify that the **Current Controller** selected are the hand motion controllers (HP Motion Controller in this example), then click **Edit** under **Current Binding**.
 ![Image of controller menu](/Images/con4edit.png)
 
 First select the **Move** tab at the top, then scroll down till you see options for the left and right thumbsticks. Edit the controls to match this image. When you are finished, you can optionally click **Save Personal Binding**. Do not click Replace Default Binding (it is difficult to undo this action).
-![Image of controller menu](/Images/con5edit.PNG)
+![Image of controller menu](/Images/con5edit.png)
 
 Click **Back** to return to the previous screen. Then select the **Gamepad** controller and click **Edit** under **Current Binding**.
 ![Image of controller menu](/Images/con6edit.png)
