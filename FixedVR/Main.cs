@@ -19,7 +19,8 @@ namespace FixedVR
         //Initializes the UDP listener        
         private UdpClient listener;
         private IPEndPoint remoteEP;        
-        private static int portNumber;                
+        private static int portNumber;
+        private byte[] bytes;
 
         //Gamepad input
         private readonly SimGamePad simPad;
@@ -63,7 +64,7 @@ namespace FixedVR
             Txt_stopdetection.Text = "5";
             Combo_stopsensitivity.Text = " 2.0";            
             Radio_alwaysrunno.Checked = true;
-            Radio_bothlegs.Checked = true;                       
+            Radio_bothlegs.Checked = true;           
         }                
         
         private void StartUDPServer()
@@ -72,7 +73,7 @@ namespace FixedVR
             {
                 while (true)
                 {
-                    byte[] bytes = listener.Receive(ref remoteEP);
+                    bytes = listener.Receive(ref remoteEP);
 
                     if (bytes != null)
                     {
