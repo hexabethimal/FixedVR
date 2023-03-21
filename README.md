@@ -19,7 +19,7 @@ This GitHub repository includes:
 ## What is FixedVR?
 This is a VR motion controller for forward movement in games, while walking or running in-place in real life. FixedVR does not require a movement harness or a large play area and is designed for both able-bodied individuals and those with disabilities or limited mobility.
 
-With FixedVR, movement-in-place is combined with the ability to navigate corners or obstacles, bend down, sidestep, turn around in place without moving, and stop when desired. It is compatible with games running through SteamVR that support continous movement (not teleportation-only movement). 
+With FixedVR, movement-in-place is combined with the ability to navigate corners or obstacles, bend down, sidestep, turn around in place without moving, and stop when desired. It is compatible with games running through SteamVR that support continuous movement (not teleportation-only movement). 
 
 As human movement varies based on individual differences, FixedVR provides multiple settings to adapt movement response to user preferences. Mouse-over tooltips provide extra information to help you make meaningful determinations about settings choices. Movement settings can be changed in-game as frequently as needed, without requiring restart. A debug panel is additionally available for those troubleshooting movement while making code adjustments.
 
@@ -39,11 +39,11 @@ Movement in Half Life: Alyx is handled the following way:
 - While walking and turning in real life is the immersive experience gained by using FixedVR, players can still additionally control turning on the left joystick and movement on the right joystick. (Using the joysticks for continuous turning or movement while remaining physically stationary might cause motion sickness.)
 
 ## Parts Required
-Minimally, you will need an Arduino with WiFi capability and an acceleromoter. Whether you choose to get these as a combination of board and shields, instead of an all-inclusive board is up to you. However, if you don’t choose the Arduino listed below, take into consideration that the movement-control of FixedVR may require modifications to accommodate the behavior of an IMU other than the ST LSM6DSOX 6-axis IMU contained in the Arduino Nano RP2040 Connect. 
+Minimally, you will need an Arduino with WiFi capability and an accelerometer. Whether you choose to get these as a combination of board and shields, instead of an all-inclusive board is up to you. However, if you don’t choose the Arduino listed below, take into consideration that the movement-control of FixedVR may require modifications to accommodate the behavior of an IMU other than the ST LSM6DSOX 6-axis IMU contained in the Arduino Nano RP2040 Connect. 
 
 Additionally, you will need some type of battery and connector (if not micro USB). The Arduino Nano RP2040 Connect can support other battery power options apart from a USB battery pack, but these will require soldering. Also, keep in mind that ordinary USB battery packs will automatically shut off at the low current requirements of the Arduino Nano RP2040 Connect.
 
-You will also need something to hold the devices + power to each leg. I used a leg band cell phone holder with velcro straps. If you have 2 legs, remember to buy 1 of each item for each leg. FixedVR also includes an option for movement activation on a single leg, whether for user preference or for disabled gamers. 
+You will also need something to hold the devices + power to each leg. I used a leg band cell phone holder with Velcro straps. If you have 2 legs, remember to buy 1 of each item for each leg. FixedVR also includes an option for movement activation on a single leg, whether for user preference or for disabled gamers. 
 
 ### Parts List (~$100 total) – No soldering required:
 - Arduino Nano RP2040 Connect (per leg)
