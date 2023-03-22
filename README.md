@@ -14,11 +14,12 @@ This GitHub repository includes:
   - [Arduino](https://github.com/hexabethimal/FixedVR#arduino-setup)
   - [FixedVR](https://github.com/hexabethimal/FixedVR#fixedvr-setup)
   - [Steam](https://github.com/hexabethimal/FixedVR#steam-setup)
+- [Compatibility Considerations](https://github.com/hexabethimal/FixedVR#compatbility-considerations)
 
 ## What is FixedVR?
 This is a VR motion controller for forward movement in games, while walking or running in-place in real life. FixedVR does not require a movement harness or a large play area and is designed for both able-bodied individuals and those with disabilities or limited mobility.
 
-With FixedVR, movement-in-place is combined with the ability to navigate corners or obstacles, bend down, sidestep, turn around in place without moving, and stop when desired. It is compatible with games running through SteamVR that support continuous movement (not teleportation-only movement). 
+With FixedVR, movement-in-place is combined with the ability to navigate corners or obstacles, bend down, sidestep, turn around in place without moving, and stop when desired. It is compatible with games running through SteamVR that support continuous movement; also known as smooth locomotion (not teleportation-only movement). 
 
 As human movement varies based on individual differences, FixedVR provides multiple settings to adapt movement response to user preferences. Mouse-over tooltips provide extra information to help you make meaningful determinations about settings choices. Movement settings can be changed in-game as frequently as needed, without requiring restart. A debug panel is additionally available for those troubleshooting movement while making code adjustments.
 
@@ -100,3 +101,6 @@ First select the **Move** tab at the top, then scroll down till you see options 
 (For Half-Life 2: VR Mod select the **On Foot** tab and set **Left Thumbstick** to **Use as DPAD** with the following: Mode - Touch, North - Sprint, East - Sprint, South - Sprint, West - Sprint)
 
 Lastly, use the Half-Life: Alyx in-game **Preferences** menu to select **Movement: Continuous**.
+
+## Compatibility Considerations
+Although it is possible to enable smooth locomotion within SteamVR for both SteamVR Home and various SteamVR games (through editing the default vrsettings file for Windows Mixed Reality), overriding the intended movement results in clipping issues, inability to ascend/descend platforms, and instability issues. Thus, expanding compatibility with smooth locomation to environments that don't support it natively is unlikely to preserve the intended experience.
