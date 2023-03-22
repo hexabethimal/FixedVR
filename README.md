@@ -2,8 +2,7 @@
 VR motion controller for movement-in-place
 
 This GitHub repository includes:
-- project files for developers, including detailed comments
-- the full application for those unfamiliar with coding
+- project files for developers, including detailed comments for customization
 - an Arduino sketch file
 - a parts list with detailed instructions and alternatives
 - a step-by-step setup guide for those new to Arduino and/or SteamVR
@@ -27,14 +26,15 @@ As human movement varies based on individual differences, FixedVR provides multi
 
 FixedVR functions as an XInput device translating controls to gamepad inputs in SteamVR control settings. It uses the [ScpVBus virtual gamepad driver](https://github.com/DavidRieman/ScpDriverInterface/) that is installed automatically when FixedVR is launched. Installation of the virtual driver is required.
 
-FixedVR has had limited compatibility testing as of September 2022. Only the following are known to be compatible:
+FixedVR has had limited compatibility testing as of March 2023. Only the following are known to be compatible:
 - HP Reverb G2 (version 2) with original hand controllers
-- Half Life: Alyx
+- Half-Life: Alyx
+- Half-Life 2: VR Mod
 
-Movement in Half Life: Alyx is handled the following way:
+Movement is handled the following way:
 - As you walk-in-place, you will move at a walking pace in the game.
 - After a set number of walking steps (configurable), your walking will automatically becoming running. This is both to simplify movement and to spare the user of actually running the distances required in many games.
-- Jumping is not handled by FixedVR currently and this is intentional. Jumping while wearing a headset and no harness could be dangerous. It is further dangerous, if not impossible, to simulate forward jumping over a gap. Instead, jumping is mapped to the left joystick button and functions as a teleport.
+- Jumping is not handled by FixedVR currently and this is intentional. Jumping in place while wearing a headset and no harness could be dangerous. It is even more dangerous to simulate forward jumping over a gap. Instead, jumping is mapped to the left joystick button which functions as a teleport.
 - The SteamVR Controller Bindings setup explained below assumes player preference for weapons in the right-hand. Hand controller and gamepad controller bindings will have to be reversed for left-handed players.
 - While walking and turning in real life is the immersive experience gained by using FixedVR, players can still additionally control turning on the left joystick and movement on the right joystick. (Using the joysticks for continuous turning or movement while remaining physically stationary might cause motion sickness.)
 
@@ -43,7 +43,7 @@ Minimally, you will need an Arduino with WiFi capability and an accelerometer. W
 
 Additionally, you will need some type of battery and connector (if not micro USB). The Arduino Nano RP2040 Connect can support other battery power options apart from a USB battery pack, but these will require soldering. Also, keep in mind that ordinary USB battery packs will automatically shut off at the low current requirements of the Arduino Nano RP2040 Connect.
 
-You will also need something to hold the devices + power to each leg. I used a leg band cell phone holder with Velcro straps. If you have 2 legs, remember to buy 1 of each item for each leg. FixedVR also includes an option for movement activation on a single leg, whether for user preference or for disabled gamers. 
+You will also need something to hold the devices + power to each leg. I used a leg-band cell-phone holder with Velcro straps. If you have 2 legs, remember to buy 1 of each item for each leg. FixedVR also includes an option for movement activation on a single leg, whether for user preference or for disabled gamers. 
 
 ### Parts List (~$100 total) – No soldering required:
 - Arduino Nano RP2040 Connect (per leg)
@@ -97,5 +97,6 @@ Click **Back** to return to the previous screen. Then select the **Gamepad** con
 
 First select the **Move** tab at the top, then scroll down till you see options for the left thumbstick. Edit the controls to match this image.
 ![Image of controller menu](/Images/con7edit.png)
+(For Half-Life 2: VR Mod select the **On Foot** tab and set **Left Thumbstick** to **Use as DPAD** with the following: Mode - Touch, North - Sprint, East - Sprint, South - Sprint, West - Sprint)
 
 Lastly, use the Half-Life: Alyx in-game **Preferences** menu to select **Movement: Continuous**.
