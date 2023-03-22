@@ -14,7 +14,7 @@ This GitHub repository includes:
   - [Arduino](https://github.com/hexabethimal/FixedVR#arduino-setup)
   - [FixedVR](https://github.com/hexabethimal/FixedVR#fixedvr-setup)
   - [Steam](https://github.com/hexabethimal/FixedVR#steam-setup)
-- [Compatibility Considerations](https://github.com/hexabethimal/FixedVR#compatbility-considerations)
+- [Compatibility Considerations](https://github.com/hexabethimal/FixedVR#compatibility-considerations)
 
 ## What is FixedVR?
 This is a VR motion controller for forward movement in games, while walking or running in-place in real life. FixedVR does not require a movement harness or a large play area and is designed for both able-bodied individuals and those with disabilities or limited mobility.
@@ -103,4 +103,4 @@ First select the **Move** tab at the top, then scroll down till you see options 
 Lastly, use the Half-Life: Alyx in-game **Preferences** menu to select **Movement: Continuous**.
 
 ## Compatibility Considerations
-Although it is possible to enable smooth locomotion within SteamVR for both SteamVR Home and various SteamVR games (through editing the default vrsettings file for Windows Mixed Reality), overriding the intended movement results in clipping issues, inability to ascend/descend platforms, and instability issues. Thus, expanding compatibility with smooth locomation to environments that don't support it natively is unlikely to preserve the intended experience.
+Although it is possible to enable smooth locomotion within SteamVR for both SteamVR Home and various SteamVR games (through editing the default vrsettings file for Windows Mixed Reality), overriding the intended movement results in clipping issues, inability to ascend/descend platforms, and instability issues. Thus, expanding compatibility with smooth locomotion to environments that don't support it natively is unlikely to preserve the intended experience.
