@@ -2,6 +2,7 @@
 VR motion controller for movement-in-place
 
 This GitHub repository includes:
+- a downloadable installer for [FixedVR](https://github.com/hexabethimal/FixedVR/releases) 
 - project files for developers, including detailed comments for customization
 - an Arduino sketch file
 - a parts list with detailed instructions and alternatives
@@ -81,22 +82,24 @@ C:\Program Files (x86)\Steam\steampps\common\SteamVR\resources\settings\default.
 ```
 2. The SteamVR Controller Bindings settings menus are difficult to navigate, difficult to understand, and at times unresponsive (sometimes requiring SteamVR restart). This is made even more difficult by only being able to make changes inside menus with your VR hand controllers and headset on. This step will therefore require you to either memorize the following screenshots, or to raise and lower your headset repeatedly while you refer back to these directions. It is tedious and frustrating, but you can save your controller profile and won’t have to do this again.
 
-First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Manage Controller Bindings**.
+   - The only controller settings that absolutely need to be changed are the **Gamepad** settings in Step 7 & 8. However, the following control bindings for Half-Life: Alyx will enable you to both maneuver in tight spaces more easily and to teleport for jumps.
+
+3. First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Manage Controller Bindings**.
 ![Image of settings menu](/Images/con1edit.png)
 
-Click to expand the list of games and select the game of your choice (Half-Life: Alyx in this example). Then click **Edit This Binding**.
+4. Click to expand the list of games and select the game of your choice (Half-Life: Alyx in this example). Then click **Edit This Binding**.
 ![Image of game select](/Images/con8edit.png)
 
-Verify that the **Current Controller** selected are the hand motion controllers (HP Motion Controller in this example), then click **Edit** under **Current Binding**.
+5. Verify that the **Current Controller** selected are the hand motion controllers (HP Motion Controller in this example), then click **Edit** under **Current Binding**.
 ![Image of controller menu](/Images/con4edit.png)
 
-First select the **Move** tab at the top, then scroll down till you see options for the left and right thumbsticks. Edit the controls to match this image. When you are finished, you can optionally click **Save Personal Binding**. Do not click Replace Default Binding (it is difficult to undo this action).
+6. First select the **Move** tab at the top, then scroll down till you see options for the left and right thumbsticks. Edit the controls to match this image. When you are finished, you can optionally click **Save Personal Binding**. Do not click Replace Default Binding (it is difficult to undo this action).
 ![Image of controller menu](/Images/con9edit.png)
 
-Click **Back** to return to the previous screen. Then select the **Gamepad** controller and click **Edit** under **Current Binding**.
+7. Click **Back** to return to the previous screen. Then select the **Gamepad** controller and click **Edit** under **Current Binding**.
 ![Image of controller menu](/Images/con6edit.png)
 
-First select the **Move** tab at the top, then scroll down till you see options for the left thumbstick. Edit the controls to match this image.
+8. First select the **Move** tab at the top, then scroll down till you see options for the left thumbstick. Edit the controls to match this image.
 ![Image of controller menu](/Images/con7edit.png)
 (For Half-Life 2: VR Mod select the **On Foot** tab and set **Left Thumbstick** to **Use as DPAD** with the following: Mode - Touch, North - Sprint, East - Sprint, South - Sprint, West - Sprint)
 
