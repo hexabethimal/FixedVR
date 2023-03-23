@@ -2,7 +2,7 @@
 VR motion controller for movement-in-place
 
 This GitHub repository includes:
-- a downloadable installer for [FixedVR](https://github.com/hexabethimal/FixedVR/releases) 
+- a downloadable [installer](https://github.com/hexabethimal/FixedVR/releases) for FixedVR 
 - project files for developers, including detailed comments for customization
 - an Arduino sketch file
 - a parts list with detailed instructions and alternatives
@@ -106,4 +106,4 @@ C:\Program Files (x86)\Steam\steampps\common\SteamVR\resources\settings\default.
 Lastly, use the Half-Life: Alyx in-game **Preferences** menu to select **Movement: Continuous**.
 
 ## Compatibility Considerations
-Although it is possible to enable smooth locomotion within SteamVR for both SteamVR Home and various SteamVR games (through editing the default vrsettings file for Windows Mixed Reality), overriding the intended movement results in clipping issues, inability to ascend/descend platforms, and instability issues. Thus, expanding compatibility with smooth locomotion to environments that don't support it natively is unlikely to preserve the intended experience.
+Although it is possible to enable smooth locomotion within SteamVR for both SteamVR Home and various SteamVR games (through editing the default vrsettings file for Windows Mixed Reality), overriding the intended movement results in clipping issues, inability to ascend/descend platforms, and instability issues. Thus, expanding compatibility with smooth locomotion to environments that don't support it natively is unlikely to provide a desirable experience.
