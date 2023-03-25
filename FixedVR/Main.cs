@@ -38,6 +38,7 @@ namespace FixedVR
         //UI variables
         private List<Control> userControls;
         private double stopSensitivity;
+        private int walkSensitivity;
         private int stopDetection;
         private bool alwaysRun;
         private bool bothLegs;               
@@ -48,7 +49,8 @@ namespace FixedVR
         #region Form Start
         public Main()
         {            
-            InitializeComponent();                                                                       
+            InitializeComponent();
+            Size = new Size(464, 521);
             SimGamePad.Instance.Initialize();
             SimGamePad.Instance.PlugIn();
             simPad = SimGamePad.Instance;
@@ -59,12 +61,13 @@ namespace FixedVR
             movementChunks = 20;            
 
             //Suggested Initial Settings            
-            Txt_walkmin.Text = "35";            
+            Txt_walkmin.Text = "35";
+            Combo_walksens.Text = " 3";
             Combo_detectrun.Text = "  20";            
             Txt_stopdetection.Text = "5";
             Combo_stopsensitivity.Text = " 2.0";            
             Radio_alwaysrunno.Checked = true;
-            Radio_bothlegs.Checked = true;           
+            Radio_bothlegs.Checked = true;            
         }                
         
         private void StartUDPServer()
@@ -298,19 +301,19 @@ namespace FixedVR
                 if (wCount < 10)
                 {
                     state = simPad.State[0];
-                    state.LeftStickY = short.MaxValue * 3 / 8;
+                    state.LeftStickY = WalkSpeed(walkSensitivity);                    
                     simPad.Update(0);
                 }
                 else if (wCount > 9 && wCount < 20)
                 {
                     state = simPad.State[0];
-                    state.LeftStickY = short.MaxValue * 1 / 2;
+                    state.LeftStickY = WalkSpeed(walkSensitivity + 1);                    
                     simPad.Update(0);
                 }
                 else if (wCount > 19 && wCount < 30)
                 {
                     state = simPad.State[0];
-                    state.LeftStickY = short.MaxValue * 3 / 4;
+                    state.LeftStickY = WalkSpeed(walkSensitivity + 2);                    
                     simPad.Update(0);
                 }                
             }
@@ -328,7 +331,16 @@ namespace FixedVR
                     simPad.Update();
                 }
             }            
-        }                   
+        }  
+        
+        private short WalkSpeed(int walkSpeedNumerator)
+        {
+            if (walkSpeedNumerator > 7)
+            {
+                walkSpeedNumerator = 7;
+            }
+            return (short)(short.MaxValue * walkSpeedNumerator / 8);           
+        }
         #endregion                     
 
         #region Form Settings and Controls
@@ -400,11 +412,25 @@ namespace FixedVR
             {
                 Combo_stopsensitivity.Items.Add(detectStop[i]);
             }
+
+            List<string> walkSens = new List<string>
+            {
+                " 2",
+                " 3",
+                " 4",
+                " 5"
+            };
+
+            for (int i = 0; i < walkSens.Count; i++)
+            {
+                Combo_walksens.Items.Add(walkSens[i]);
+            }            
         }
 
         private void InitiatePanelToolTips()
         {
-            CreateToolTips(Panel_walkmin, "Minimum movement change to walk. Lower risks walking when not intending.");            
+            CreateToolTips(Panel_walkmin, "Minimum movement change to walk. Lower risks walking when not intending.");
+            CreateToolTips(Panel_walksens, "Starting movement speed. Some games require stronger input to move.");
             CreateToolTips(Panel_runmin, "Required # of sequential walks to produce running speed.");            
             CreateToolTips(Panel_stopmax, "All movement changes below this number will be considered as stopped.");
             CreateToolTips(Panel_stopsense, "Lower is more sensitive, but may produce false stops.");
@@ -412,7 +438,8 @@ namespace FixedVR
             CreateToolTips(Panel_movement, "If each leg, each leg produces 1 movement forward. Both legs may seem more natural/intuitive.");            
             CreateToolTips(Panel_port, "Your specified port that must match the Arduino.");
 
-            CreateToolTips(Lbl_walkmin, "Minimum movement change to walk. Lower risks walking when not intending.");            
+            CreateToolTips(Lbl_walkmin, "Minimum movement change to walk. Lower risks walking when not intending.");
+            CreateToolTips(Lbl_walksens, "Starting movement speed. Some games require stronger input to move.");
             CreateToolTips(Lbl_runmin, "Required # of sequential walks to produce running speed.");            
             CreateToolTips(Lbl_stopmax, "All movement changes below this number will be considered as stopped.");
             CreateToolTips(Lbl_stopsense, "Lower is more sensitive, but may produce false stops.");
@@ -474,7 +501,7 @@ namespace FixedVR
 
                 try
                 {
-                    changeMeasureWalk = int.Parse(Txt_walkmin.Text);
+                    changeMeasureWalk = int.Parse(Txt_walkmin.Text);                    
                     stopDetection = int.Parse(Txt_stopdetection.Text);
                 }
                 catch
@@ -503,6 +530,7 @@ namespace FixedVR
 
                 if (successful == true)
                 {
+                    walkSensitivity = int.Parse(Combo_walksens.Text.Trim());
                     changeMeasureRun = int.Parse(Combo_detectrun.Text.Trim());
                     stopSensitivity = double.Parse(Combo_stopsensitivity.Text.Trim());
 
@@ -548,7 +576,10 @@ namespace FixedVR
 
         private void Btn_stopdebug_Click(object sender, EventArgs e)
         {
-            ThreadingServer.Abort();
+            if (ThreadingServer != null)
+            {
+                ThreadingServer.Abort();
+            }
             Btn_connect.Text = "Start Receiving";
             ToggleUserControlEnabled(true);
         }

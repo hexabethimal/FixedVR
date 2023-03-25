@@ -32,10 +32,11 @@ namespace FixedVR
             this.Txt_debug = new System.Windows.Forms.TextBox();
             this.Btn_connect = new System.Windows.Forms.Button();
             this.Flowlayout_main = new System.Windows.Forms.FlowLayoutPanel();
-            this.Btn_toggledebug = new System.Windows.Forms.Button();
-            this.Panel_debug = new System.Windows.Forms.Panel();
-            this.Btn_stopdebug = new System.Windows.Forms.Button();
             this.Panel_main = new System.Windows.Forms.Panel();
+            this.Panel_walksens = new System.Windows.Forms.Panel();
+            this.Combo_walksens = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Lbl_walksens = new System.Windows.Forms.Label();
             this.Panel_walkmin = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.Txt_walkmin = new System.Windows.Forms.TextBox();
@@ -63,6 +64,9 @@ namespace FixedVR
             this.Radio_bothlegs = new System.Windows.Forms.RadioButton();
             this.Lbl_movement = new System.Windows.Forms.Label();
             this.Radio_eachleg = new System.Windows.Forms.RadioButton();
+            this.Btn_toggledebug = new System.Windows.Forms.Button();
+            this.Panel_debug = new System.Windows.Forms.Panel();
+            this.Btn_stopdebug = new System.Windows.Forms.Button();
             this.Panel_sidewaysense = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.Txt_sidesensitivity = new System.Windows.Forms.TextBox();
@@ -71,9 +75,10 @@ namespace FixedVR
             this.label10 = new System.Windows.Forms.Label();
             this.Txt_walkmax = new System.Windows.Forms.TextBox();
             this.Lbl_walkmax = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Flowlayout_main.SuspendLayout();
-            this.Panel_debug.SuspendLayout();
             this.Panel_main.SuspendLayout();
+            this.Panel_walksens.SuspendLayout();
             this.Panel_walkmin.SuspendLayout();
             this.Panel_stopmax.SuspendLayout();
             this.Panel_runmin.SuspendLayout();
@@ -81,8 +86,10 @@ namespace FixedVR
             this.Panel_port.SuspendLayout();
             this.Panel_alwaysrun.SuspendLayout();
             this.Panel_movement.SuspendLayout();
+            this.Panel_debug.SuspendLayout();
             this.Panel_sidewaysense.SuspendLayout();
             this.Panel_walkmax.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Txt_debug
@@ -92,7 +99,7 @@ namespace FixedVR
             this.Txt_debug.Multiline = true;
             this.Txt_debug.Name = "Txt_debug";
             this.Txt_debug.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Txt_debug.Size = new System.Drawing.Size(421, 324);
+            this.Txt_debug.Size = new System.Drawing.Size(421, 367);
             this.Txt_debug.TabIndex = 0;
             this.Txt_debug.TabStop = false;
             // 
@@ -102,7 +109,7 @@ namespace FixedVR
             this.Btn_connect.FlatAppearance.BorderSize = 2;
             this.Btn_connect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_connect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_connect.Location = new System.Drawing.Point(3, 319);
+            this.Btn_connect.Location = new System.Drawing.Point(3, 364);
             this.Btn_connect.Margin = new System.Windows.Forms.Padding(5);
             this.Btn_connect.Name = "Btn_connect";
             this.Btn_connect.Size = new System.Drawing.Size(421, 42);
@@ -114,56 +121,18 @@ namespace FixedVR
             // 
             // Flowlayout_main
             // 
-            this.Flowlayout_main.Controls.Add(this.Btn_toggledebug);
-            this.Flowlayout_main.Controls.Add(this.Panel_debug);
             this.Flowlayout_main.Controls.Add(this.Panel_main);
+            this.Flowlayout_main.Controls.Add(this.panel1);
+            this.Flowlayout_main.Controls.Add(this.Panel_debug);
             this.Flowlayout_main.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Flowlayout_main.Location = new System.Drawing.Point(7, 8);
             this.Flowlayout_main.Name = "Flowlayout_main";
-            this.Flowlayout_main.Size = new System.Drawing.Size(436, 794);
+            this.Flowlayout_main.Size = new System.Drawing.Size(436, 896);
             this.Flowlayout_main.TabIndex = 7;
-            // 
-            // Btn_toggledebug
-            // 
-            this.Btn_toggledebug.BackColor = System.Drawing.Color.LightSlateGray;
-            this.Btn_toggledebug.FlatAppearance.BorderSize = 2;
-            this.Btn_toggledebug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_toggledebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_toggledebug.ForeColor = System.Drawing.Color.White;
-            this.Btn_toggledebug.Location = new System.Drawing.Point(3, 3);
-            this.Btn_toggledebug.Margin = new System.Windows.Forms.Padding(3, 3, 3, 1);
-            this.Btn_toggledebug.Name = "Btn_toggledebug";
-            this.Btn_toggledebug.Size = new System.Drawing.Size(428, 42);
-            this.Btn_toggledebug.TabIndex = 8;
-            this.Btn_toggledebug.TabStop = false;
-            this.Btn_toggledebug.Text = "Toggle Debug Panel";
-            this.Btn_toggledebug.UseVisualStyleBackColor = false;
-            this.Btn_toggledebug.Click += new System.EventHandler(this.Btn_toggledebug_Click);
-            // 
-            // Panel_debug
-            // 
-            this.Panel_debug.Controls.Add(this.Btn_stopdebug);
-            this.Panel_debug.Controls.Add(this.Txt_debug);
-            this.Panel_debug.Location = new System.Drawing.Point(3, 49);
-            this.Panel_debug.Name = "Panel_debug";
-            this.Panel_debug.Size = new System.Drawing.Size(428, 367);
-            this.Panel_debug.TabIndex = 8;
-            this.Panel_debug.Visible = false;
-            // 
-            // Btn_stopdebug
-            // 
-            this.Btn_stopdebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_stopdebug.Location = new System.Drawing.Point(3, 333);
-            this.Btn_stopdebug.Name = "Btn_stopdebug";
-            this.Btn_stopdebug.Size = new System.Drawing.Size(421, 31);
-            this.Btn_stopdebug.TabIndex = 5;
-            this.Btn_stopdebug.TabStop = false;
-            this.Btn_stopdebug.Text = "Stop Debug";
-            this.Btn_stopdebug.UseVisualStyleBackColor = true;
-            this.Btn_stopdebug.Click += new System.EventHandler(this.Btn_stopdebug_Click);
             // 
             // Panel_main
             // 
+            this.Panel_main.Controls.Add(this.Panel_walksens);
             this.Panel_main.Controls.Add(this.Panel_walkmin);
             this.Panel_main.Controls.Add(this.Panel_stopmax);
             this.Panel_main.Controls.Add(this.Panel_runmin);
@@ -172,10 +141,57 @@ namespace FixedVR
             this.Panel_main.Controls.Add(this.Panel_alwaysrun);
             this.Panel_main.Controls.Add(this.Panel_movement);
             this.Panel_main.Controls.Add(this.Btn_connect);
-            this.Panel_main.Location = new System.Drawing.Point(3, 422);
+            this.Panel_main.Location = new System.Drawing.Point(3, 3);
             this.Panel_main.Name = "Panel_main";
-            this.Panel_main.Size = new System.Drawing.Size(428, 367);
+            this.Panel_main.Size = new System.Drawing.Size(428, 410);
             this.Panel_main.TabIndex = 9;
+            // 
+            // Panel_walksens
+            // 
+            this.Panel_walksens.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Panel_walksens.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel_walksens.Controls.Add(this.Combo_walksens);
+            this.Panel_walksens.Controls.Add(this.label4);
+            this.Panel_walksens.Controls.Add(this.Lbl_walksens);
+            this.Panel_walksens.Location = new System.Drawing.Point(3, 50);
+            this.Panel_walksens.Margin = new System.Windows.Forms.Padding(5);
+            this.Panel_walksens.Name = "Panel_walksens";
+            this.Panel_walksens.Size = new System.Drawing.Size(421, 35);
+            this.Panel_walksens.TabIndex = 24;
+            // 
+            // Combo_walksens
+            // 
+            this.Combo_walksens.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Combo_walksens.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combo_walksens.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Combo_walksens.FormattingEnabled = true;
+            this.Combo_walksens.Location = new System.Drawing.Point(217, 3);
+            this.Combo_walksens.Name = "Combo_walksens";
+            this.Combo_walksens.Size = new System.Drawing.Size(81, 27);
+            this.Combo_walksens.TabIndex = 12;
+            this.Combo_walksens.TabStop = false;
+            this.Combo_walksens.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ComboBoxDesign_DrawItem);
+            this.Combo_walksens.SelectedIndexChanged += new System.EventHandler(this.Combo_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(323, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 20);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "(1 digit)";
+            // 
+            // Lbl_walksens
+            // 
+            this.Lbl_walksens.AutoSize = true;
+            this.Lbl_walksens.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_walksens.Location = new System.Drawing.Point(3, 6);
+            this.Lbl_walksens.Name = "Lbl_walksens";
+            this.Lbl_walksens.Size = new System.Drawing.Size(134, 20);
+            this.Lbl_walksens.TabIndex = 9;
+            this.Lbl_walksens.Text = "Walk Sensitivity";
             // 
             // Panel_walkmin
             // 
@@ -203,7 +219,7 @@ namespace FixedVR
             // Txt_walkmin
             // 
             this.Txt_walkmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_walkmin.Location = new System.Drawing.Point(217, 3);
+            this.Txt_walkmin.Location = new System.Drawing.Point(217, 4);
             this.Txt_walkmin.MaxLength = 2;
             this.Txt_walkmin.Name = "Txt_walkmin";
             this.Txt_walkmin.Size = new System.Drawing.Size(81, 26);
@@ -228,7 +244,7 @@ namespace FixedVR
             this.Panel_stopmax.Controls.Add(this.label2);
             this.Panel_stopmax.Controls.Add(this.Txt_stopdetection);
             this.Panel_stopmax.Controls.Add(this.Lbl_stopmax);
-            this.Panel_stopmax.Location = new System.Drawing.Point(3, 95);
+            this.Panel_stopmax.Location = new System.Drawing.Point(3, 140);
             this.Panel_stopmax.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_stopmax.Name = "Panel_stopmax";
             this.Panel_stopmax.Size = new System.Drawing.Size(421, 35);
@@ -247,7 +263,7 @@ namespace FixedVR
             // Txt_stopdetection
             // 
             this.Txt_stopdetection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_stopdetection.Location = new System.Drawing.Point(217, 3);
+            this.Txt_stopdetection.Location = new System.Drawing.Point(217, 4);
             this.Txt_stopdetection.MaxLength = 2;
             this.Txt_stopdetection.Name = "Txt_stopdetection";
             this.Txt_stopdetection.Size = new System.Drawing.Size(81, 26);
@@ -272,7 +288,7 @@ namespace FixedVR
             this.Panel_runmin.Controls.Add(this.label1);
             this.Panel_runmin.Controls.Add(this.Combo_detectrun);
             this.Panel_runmin.Controls.Add(this.Lbl_runmin);
-            this.Panel_runmin.Location = new System.Drawing.Point(3, 50);
+            this.Panel_runmin.Location = new System.Drawing.Point(3, 95);
             this.Panel_runmin.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_runmin.Name = "Panel_runmin";
             this.Panel_runmin.Size = new System.Drawing.Size(421, 35);
@@ -319,7 +335,7 @@ namespace FixedVR
             this.Panel_stopsense.Controls.Add(this.label3);
             this.Panel_stopsense.Controls.Add(this.Combo_stopsensitivity);
             this.Panel_stopsense.Controls.Add(this.Lbl_stopsense);
-            this.Panel_stopsense.Location = new System.Drawing.Point(3, 140);
+            this.Panel_stopsense.Location = new System.Drawing.Point(3, 185);
             this.Panel_stopsense.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_stopsense.Name = "Panel_stopsense";
             this.Panel_stopsense.Size = new System.Drawing.Size(421, 35);
@@ -365,7 +381,7 @@ namespace FixedVR
             this.Panel_port.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel_port.Controls.Add(this.Txt_serversocket);
             this.Panel_port.Controls.Add(this.Lbl_port);
-            this.Panel_port.Location = new System.Drawing.Point(3, 275);
+            this.Panel_port.Location = new System.Drawing.Point(3, 320);
             this.Panel_port.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_port.Name = "Panel_port";
             this.Panel_port.Size = new System.Drawing.Size(421, 34);
@@ -400,7 +416,7 @@ namespace FixedVR
             this.Panel_alwaysrun.Controls.Add(this.Radio_alwaysrunno);
             this.Panel_alwaysrun.Controls.Add(this.Lbl_alwaysrun);
             this.Panel_alwaysrun.Controls.Add(this.Radio_alwaysrunyes);
-            this.Panel_alwaysrun.Location = new System.Drawing.Point(3, 185);
+            this.Panel_alwaysrun.Location = new System.Drawing.Point(3, 230);
             this.Panel_alwaysrun.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_alwaysrun.Name = "Panel_alwaysrun";
             this.Panel_alwaysrun.Size = new System.Drawing.Size(421, 35);
@@ -445,7 +461,7 @@ namespace FixedVR
             this.Panel_movement.Controls.Add(this.Radio_bothlegs);
             this.Panel_movement.Controls.Add(this.Lbl_movement);
             this.Panel_movement.Controls.Add(this.Radio_eachleg);
-            this.Panel_movement.Location = new System.Drawing.Point(3, 230);
+            this.Panel_movement.Location = new System.Drawing.Point(3, 275);
             this.Panel_movement.Margin = new System.Windows.Forms.Padding(5);
             this.Panel_movement.Name = "Panel_movement";
             this.Panel_movement.Size = new System.Drawing.Size(421, 35);
@@ -482,6 +498,45 @@ namespace FixedVR
             this.Radio_eachleg.TabIndex = 15;
             this.Radio_eachleg.Text = "Each Leg";
             this.Radio_eachleg.UseVisualStyleBackColor = true;
+            // 
+            // Btn_toggledebug
+            // 
+            this.Btn_toggledebug.BackColor = System.Drawing.Color.LightSlateGray;
+            this.Btn_toggledebug.FlatAppearance.BorderSize = 2;
+            this.Btn_toggledebug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_toggledebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_toggledebug.ForeColor = System.Drawing.Color.White;
+            this.Btn_toggledebug.Location = new System.Drawing.Point(3, 1);
+            this.Btn_toggledebug.Margin = new System.Windows.Forms.Padding(3, 3, 3, 1);
+            this.Btn_toggledebug.Name = "Btn_toggledebug";
+            this.Btn_toggledebug.Size = new System.Drawing.Size(421, 42);
+            this.Btn_toggledebug.TabIndex = 8;
+            this.Btn_toggledebug.TabStop = false;
+            this.Btn_toggledebug.Text = "Toggle Debug Panel";
+            this.Btn_toggledebug.UseVisualStyleBackColor = false;
+            this.Btn_toggledebug.Click += new System.EventHandler(this.Btn_toggledebug_Click);
+            // 
+            // Panel_debug
+            // 
+            this.Panel_debug.Controls.Add(this.Btn_stopdebug);
+            this.Panel_debug.Controls.Add(this.Txt_debug);
+            this.Panel_debug.Location = new System.Drawing.Point(3, 473);
+            this.Panel_debug.Name = "Panel_debug";
+            this.Panel_debug.Size = new System.Drawing.Size(428, 410);
+            this.Panel_debug.TabIndex = 8;
+            this.Panel_debug.Visible = false;
+            // 
+            // Btn_stopdebug
+            // 
+            this.Btn_stopdebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_stopdebug.Location = new System.Drawing.Point(3, 376);
+            this.Btn_stopdebug.Name = "Btn_stopdebug";
+            this.Btn_stopdebug.Size = new System.Drawing.Size(421, 31);
+            this.Btn_stopdebug.TabIndex = 5;
+            this.Btn_stopdebug.TabStop = false;
+            this.Btn_stopdebug.Text = "Stop Debug";
+            this.Btn_stopdebug.UseVisualStyleBackColor = true;
+            this.Btn_stopdebug.Click += new System.EventHandler(this.Btn_stopdebug_Click);
             // 
             // Panel_sidewaysense
             // 
@@ -571,12 +626,20 @@ namespace FixedVR
             this.Lbl_walkmax.TabIndex = 9;
             this.Lbl_walkmax.Text = "Maximum Detect Walk";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.Btn_toggledebug);
+            this.panel1.Location = new System.Drawing.Point(3, 419);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(428, 48);
+            this.panel1.TabIndex = 25;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(450, 431);
+            this.ClientSize = new System.Drawing.Size(449, 487);
             this.Controls.Add(this.Panel_sidewaysense);
             this.Controls.Add(this.Flowlayout_main);
             this.Controls.Add(this.Panel_walkmax);
@@ -586,9 +649,9 @@ namespace FixedVR
             this.Text = "FixedVR";
             this.TopMost = true;
             this.Flowlayout_main.ResumeLayout(false);
-            this.Panel_debug.ResumeLayout(false);
-            this.Panel_debug.PerformLayout();
             this.Panel_main.ResumeLayout(false);
+            this.Panel_walksens.ResumeLayout(false);
+            this.Panel_walksens.PerformLayout();
             this.Panel_walkmin.ResumeLayout(false);
             this.Panel_walkmin.PerformLayout();
             this.Panel_stopmax.ResumeLayout(false);
@@ -603,10 +666,13 @@ namespace FixedVR
             this.Panel_alwaysrun.PerformLayout();
             this.Panel_movement.ResumeLayout(false);
             this.Panel_movement.PerformLayout();
+            this.Panel_debug.ResumeLayout(false);
+            this.Panel_debug.PerformLayout();
             this.Panel_sidewaysense.ResumeLayout(false);
             this.Panel_sidewaysense.PerformLayout();
             this.Panel_walkmax.ResumeLayout(false);
             this.Panel_walkmax.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -655,6 +721,11 @@ namespace FixedVR
         private System.Windows.Forms.ComboBox Combo_detectrun;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Btn_stopdebug;
+        private System.Windows.Forms.Panel Panel_walksens;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Lbl_walksens;
+        private System.Windows.Forms.ComboBox Combo_walksens;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

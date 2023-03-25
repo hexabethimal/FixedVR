@@ -15,6 +15,7 @@ This GitHub repository includes:
   - [Arduino](https://github.com/hexabethimal/FixedVR#arduino-setup)
   - [FixedVR](https://github.com/hexabethimal/FixedVR#fixedvr-setup)
   - [Steam](https://github.com/hexabethimal/FixedVR#steam-setup)
+- [Game Specific Setup](https://github.com/hexabethimal/FixedVR#game-specific-setup)
 - [Compatibility Considerations](https://github.com/hexabethimal/FixedVR#compatibility-considerations)
 
 ## What is FixedVR?
@@ -24,7 +25,7 @@ With FixedVR, movement-in-place is combined with the ability to navigate corners
 
 As human movement varies based on individual differences, FixedVR provides multiple settings to adapt movement response to user preferences. Mouse-over tooltips provide extra information to help you make meaningful determinations about settings choices. Movement settings can be changed in-game as frequently as needed, without requiring restart. A debug panel is additionally available for those troubleshooting movement while making code adjustments.
 
-![Image of FixedVR UI](/Images/interface6.png)
+![Image of FixedVR UI](/Images/interface7.png)
 
 FixedVR functions as an XInput device translating controls to gamepad inputs in SteamVR control settings. It uses the [ScpVBus virtual gamepad driver](https://github.com/DavidRieman/ScpDriverInterface/) that is installed automatically when FixedVR is launched. Installation of the virtual driver is required.
 
@@ -32,6 +33,7 @@ FixedVR has had limited compatibility testing as of March 2023. Only the followi
 - HP Reverb G2 (version 2) with original hand controllers
 - Half-Life: Alyx
 - Half-Life 2: VR Mod
+- Blade & Sorcery
 
 Movement is handled the following way:
 - As you walk-in-place, you will move at a walking pace in the game.
@@ -80,30 +82,52 @@ uint16_t portNumber = 12345; //The port number of the computer running FixedVR
 ```
 C:\Program Files (x86)\Steam\steampps\common\SteamVR\resources\settings\default.vrsettings
 ```
-2. The SteamVR Controller Bindings settings menus are difficult to navigate, difficult to understand, and at times unresponsive (sometimes requiring SteamVR restart). This is made even more difficult by only being able to make changes inside menus with your VR hand controllers and headset on. This step will therefore require you to either memorize the following screenshots, or to raise and lower your headset repeatedly while you refer back to these directions. It is tedious and frustrating, but you can save your controller profile and won’t have to do this again.
 
-   - The only controller settings that absolutely need to be changed are the **Gamepad** settings in Step 7 & 8. However, the following control bindings for Half-Life: Alyx will enable you to both maneuver in tight spaces more easily and to teleport for jumps.
+### Game Specific Setup
+The SteamVR Controller Bindings settings menus are difficult to navigate, difficult to understand, and at times unresponsive (sometimes requiring SteamVR restart). This is made even more difficult by only being able to make changes inside menus with your VR hand controllers and headset on. This step will therefore require you to either memorize the following screenshots, or to raise and lower your headset repeatedly while you refer back to these directions. It is tedious and frustrating, but you can save your controller profile and won’t have to do this again.
 
-3. First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Manage Controller Bindings**.
+For each game, the only controller settings that absolutely need to be changed are the **Gamepad** settings. However, additional control settings provided will help compliment your leg movement with controls that permit you to turn or maneuver in tight spaces more easily and to jump or teleport to jump (depending on the game).
+
+1. Half-Life: Alyx
+
+   - First access the **Settings** menu in SteamVR, then click **Controllers**, then click **Manage Controller Bindings**.
 ![Image of settings menu](/Images/con1edit.png)
 
-4. Click to expand the list of games and select the game of your choice (Half-Life: Alyx in this example). Then click **Edit This Binding**.
+   - Click to expand the list of games and select the game of your choice (Half-Life: Alyx in this example). Then click **Edit This Binding**.
 ![Image of game select](/Images/con8edit.png)
 
-5. Verify that the **Current Controller** selected are the hand motion controllers (HP Motion Controller in this example), then click **Edit** under **Current Binding**.
+   - Verify that the **Current Controller** selected are the hand motion controllers (HP Motion Controller in this example), then click **Edit** under **Current Binding**.
 ![Image of controller menu](/Images/con4edit.png)
 
-6. First select the **Move** tab at the top, then scroll down till you see options for the left and right thumbsticks. Edit the controls to match this image. When you are finished, you can optionally click **Save Personal Binding**. Do not click Replace Default Binding (it is difficult to undo this action).
+   - First select the **Move** tab at the top, then scroll down till you see options for the left and right thumbsticks. Edit the controls to match this image. When you are finished, you can optionally click **Save Personal Binding**. Do not click Replace Default Binding (it is difficult to undo this action).
 ![Image of controller menu](/Images/con9edit.png)
 
-7. Click **Back** to return to the previous screen. Then select the **Gamepad** controller and click **Edit** under **Current Binding**.
+   - Click **Back** to return to the previous screen. Then select the **Gamepad** controller and click **Edit** under **Current Binding**.
 ![Image of controller menu](/Images/con6edit.png)
 
-8. First select the **Move** tab at the top, then scroll down till you see options for the left thumbstick. Edit the controls to match this image.
+   - First select the **Move** tab at the top, then scroll down till you see options for the left thumbstick. Edit the controls to match this image.
 ![Image of controller menu](/Images/con7edit.png)
-(For Half-Life 2: VR Mod select the **On Foot** tab and set **Left Thumbstick** to **Use as DPAD** with the following: Mode - Touch, North - Sprint, East - Sprint, South - Sprint, West - Sprint)
 
-Lastly, use the Half-Life: Alyx in-game **Preferences** menu to select **Movement: Continuous**.
+   - Lastly, use the Half-Life: Alyx in-game **Preferences** menu to select **Movement: Continuous**.
+
+2. Half-Life 2: VR Mod
+
+   - No recommended changes to default hand motion controllers.
+
+   - Select the **Gamepad** controller and click **Edit** under **Current Binding**. Select the **On Foot** tab and set **Left Thumbstick** to **Use as DPAD** with the following:
+![Image of controller menu](/Images/hl2con1.png)     
+	 
+3. Blade & Sorcery
+
+   - Verify that the **Current Controller** selected are the hand motion controllers (HP Motion Controller in this example), then click **Edit** under **Current Binding**. The following just reverses the default joystick movement controls with turn on the left, as the instructions above. 
+![Image of controller menu](/Images/bscon1.png) 
+
+![Image of controller menu](/Images/bscon2.png) 
+   
+   - Select the **Gamepad** controller and click **Edit** under **Current Binding**.
+![Image of controller menu](/Images/bscon3.png)
+
+   - Recommended to set FixedVR Walk Sensitivity to 5
 
 ## Compatibility Considerations
 Although it is possible to enable smooth locomotion within SteamVR for both SteamVR Home and various SteamVR games (through editing the default vrsettings file for Windows Mixed Reality), overriding the intended movement results in clipping issues, inability to ascend/descend platforms, and instability issues. Thus, expanding compatibility with smooth locomotion to environments that don't support it natively is unlikely to provide a desirable experience.
