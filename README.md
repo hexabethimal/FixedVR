@@ -15,7 +15,7 @@ This GitHub repository includes:
   - [Arduino](https://github.com/hexabethimal/FixedVR#arduino-setup)
   - [FixedVR](https://github.com/hexabethimal/FixedVR#fixedvr-setup)
   - [Steam](https://github.com/hexabethimal/FixedVR#steam-setup)
-- [Game Specific Setup](https://github.com/hexabethimal/FixedVR#game-specific-setup)
+  - [Game Specific Setup](https://github.com/hexabethimal/FixedVR#game-specific-setup)
 - [Compatibility Considerations](https://github.com/hexabethimal/FixedVR#compatibility-considerations)
 
 ## What is FixedVR?
