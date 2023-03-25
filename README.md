@@ -17,6 +17,7 @@ This GitHub repository includes:
   - [Steam](https://github.com/hexabethimal/FixedVR#steam-setup)
   - [Game Specific Setup](https://github.com/hexabethimal/FixedVR#game-specific-setup)
 - [Compatibility Considerations](https://github.com/hexabethimal/FixedVR#compatibility-considerations)
+- [Troubleshooting](https://github.com/hexabethimal/FixedVR#troubleshooting)
 
 ## What is FixedVR?
 This is a VR motion controller for forward movement in games, while walking or running in-place in real life. FixedVR does not require a movement harness or a large play area and is designed for both able-bodied individuals and those with disabilities or limited mobility.
@@ -134,3 +135,14 @@ For each game, the only controller settings that absolutely need to be changed a
 
 ## Compatibility Considerations
 Although it is possible to enable smooth locomotion within SteamVR for both SteamVR Home and various SteamVR games (through editing the default vrsettings file for Windows Mixed Reality), overriding the intended movement results in clipping issues, inability to ascend/descend platforms, and instability issues. Thus, expanding compatibility with smooth locomotion to environments that don't support it natively is unlikely to provide a desirable experience.
+
+## Troubleshooting
+1. How to test that FixedVR is receiving movement inputs from the Arduino
+   - Verify that your computer is connected to your wireless SSID.
+   - Verify that your network settings are enabling communication through the IP and Port that you have set.   
+   - Click to Toggle Debug Panel and verify that you are seeing a combination of "w" and "+" movement indicators as you move the arduino(s).
+
+2. How to make sure the game is set up to register inputs
+   - Verify that the gamepad controls you set up are selected within the SteamVR settings. When entering a new SteamVR session, sometimes it's necessary to go to SteamVR settings and select Gamepad, which forces SteamVR to retrieve the last saved configuration. Then you can return to your game.
+   - Verify that the `default.vrsettings` file in `\Steam\steampps\common\SteamVR\resources\settings\default.vrsettings` has not been overwritten through a Steam update. If so, refer to [Steam Setup](https://github.com/hexabethimal/FixedVR#steam-setup)
+   - Try adjusting your Walk Sensitivity number.     
