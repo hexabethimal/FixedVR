@@ -120,8 +120,11 @@ For each game, the only controller settings that absolutely need to be changed a
 3. Blade & Sorcery
 
    - Verify that the **Current Controller** selected are the hand motion controllers (HP Motion Controller in this example), then click **Edit** under **Current Binding**. The following just reverses the default joystick movement controls with turn on the left, as the instructions above. 
+
+   - Left Hand
 ![Image of controller menu](/Images/bscon1.png) 
 
+   - Right Hand
 ![Image of controller menu](/Images/bscon2.png) 
    
    - Select the **Gamepad** controller and click **Edit** under **Current Binding**.
