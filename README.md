@@ -113,20 +113,14 @@ For each game, the only controller settings that absolutely need to be changed a
 
 2. Half-Life 2: VR Mod
 
-   - No recommended changes to default hand motion controllers.
+   - (Optional) Reverse movement/turning defaults on hand motion controllers, depending on your hand preference.
 
    - Select the **Gamepad** controller and click **Edit** under **Current Binding**. Select the **On Foot** tab and set **Left Thumbstick** to **Use as DPAD** with the following:
 ![Image of controller menu](/Images/hl2con1.png)     
 	 
 3. Blade & Sorcery
 
-   - Verify that the **Current Controller** selected are the hand motion controllers (HP Motion Controller in this example), then click **Edit** under **Current Binding**. The following just reverses the default joystick movement controls with turn on the left, as the instructions above. 
-
-   - Left Hand
-![Image of controller menu](/Images/bscon1.png) 
-
-   - Right Hand
-![Image of controller menu](/Images/bscon2.png) 
+   - (Optional) Reverse movement/turning defaults on hand motion controllers, depending on your hand preference.
    
    - Select the **Gamepad** controller and click **Edit** under **Current Binding**.
 ![Image of controller menu](/Images/bscon3.png)
@@ -137,12 +131,12 @@ For each game, the only controller settings that absolutely need to be changed a
 Although it is possible to enable smooth locomotion within SteamVR for both SteamVR Home and various SteamVR games (through editing the default vrsettings file for Windows Mixed Reality), overriding the intended movement results in clipping issues, inability to ascend/descend platforms, and instability issues. Thus, expanding compatibility with smooth locomotion to environments that don't support it natively is unlikely to provide a desirable experience.
 
 ## Troubleshooting
-1. How to test that FixedVR is receiving movement inputs from the Arduino
+1. How to test that FixedVR is receiving movement inputs from the arduino
    - Verify that your computer is connected to your wireless SSID.
    - Verify that your network settings are enabling communication through the IP and Port that you have set.   
    - Click to Toggle Debug Panel and verify that you are seeing a combination of "w" and "+" movement indicators as you move the arduino(s).
 
 2. How to make sure the game is set up to register inputs
    - Verify that the gamepad controls you set up are selected within the SteamVR settings. When entering a new SteamVR session, sometimes it's necessary to go to SteamVR settings and select Gamepad, which forces SteamVR to retrieve the last saved configuration. Then you can return to your game.
-   - Verify that the `default.vrsettings` file in `\Steam\steampps\common\SteamVR\resources\settings\default.vrsettings` has not been overwritten through a Steam update. If so, refer to [Steam Setup](https://github.com/hexabethimal/FixedVR#steam-setup)
+   - Verify that the `default.vrsettings` file in `\Steam\steampps\common\SteamVR\resources\settings` has not been overwritten through a Steam update. If so, refer to [Steam Setup](https://github.com/hexabethimal/FixedVR#steam-setup)
    - Try adjusting your Walk Sensitivity number.     
